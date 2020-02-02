@@ -1,0 +1,50 @@
+{
+  "name": "final_07_kogayusuke",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8000",
+  "dependencies": {
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/icons": "^4.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.1",
+    "rete": "^1.4.3-rc.1",
+    "rete-area-plugin": "^0.2.1",
+    "rete-cli": "^0.6.0",
+    "rete-comment-plugin": "^0.6.1",
+    "rete-connection-plugin": "^0.9.0",
+    "rete-context-menu-plugin": "^0.5.2",
+    "rete-dock-plugin": "^0.2.1",
+    "rete-history-plugin": "^0.2.1",
+    "rete-keyboard-plugin": "^0.1.2",
+    "rete-minimap-plugin": "^0.3.1",
+    "rete-react-render-plugin": "^0.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

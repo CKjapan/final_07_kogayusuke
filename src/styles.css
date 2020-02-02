@@ -1,0 +1,583 @@
+/* start  全体 */
+*{
+ box-sizing: border-box;
+text-decoration: none;
+}
+ 
+html{
+height: 100vh;
+width: 100vw;
+font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.App{
+height: 100vh;
+width: 100vw;
+}
+body{
+height: 100%;
+margin: 0;
+}
+/* end   全体 */
+/*  start  ヘッダー */
+.header{
+position: fixed;
+height: 60px;
+width: 100vw;
+top:0;
+left: 0;
+background-color: #FFFFFF;
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+z-index: 1;
+}
+.header_menu{
+display: flex;
+align-items: center;
+position: relative;
+height: 100%;
+}
+ 
+.logo_box{
+width: 173px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 32px;
+z-index: 1;
+}
+.app_logo{
+ object-fit: contain;
+ height: 36px;
+ width: 36px;
+}
+.logo_box .MuiButtonBase-root.MuiIconButton-root{
+ height: 60px;
+}
+.app_title{
+ object-fit: contain;
+ padding-left: 9px;
+ height: 28px;
+}
+.app_title2{
+ object-fit: contain;
+ padding-left: 9px;
+ height: 28px;
+ Visibility:hidden;
+}
+ 
+.save_box{
+ width: 100%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ -webkit-transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+}
+ 
+.save_box form{
+ width: 100%;
+ height: 60px;
+ display: flex;
+ justify-content: center;
+}
+ 
+/* タイトルインプット */
+.input_title .MuiOutlinedInput-input{
+ padding: 12px !important;
+ text-align: center;
+ font-weight: 900 !important;
+ font-size: 19px !important;
+ color: rgba(0, 0, 0, 0.7) !important;
+}
+.input_title .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+ border-color: rgba(227,233,244, 0.6) !important;
+ background-color: rgba(227,233,244, 0.5) !important;
+}
+.input_title .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+ border-width: 2px;
+ outline:0 !important;
+ border-color: rgba(28,130,247,0.6) !important;
+ box-shadow:0px 0px 5px rgba(28,130,247,0.5) !important;
+}
+.input_title .MuiOutlinedInput-notchedOutline {
+ border-color: #FFFFFF !important;
+}
+.input_title{
+ display: flex;
+ align-items: center;
+}
+ 
+/*  */
+ 
+.save_button{
+ position: absolute;
+ right: 60px;
+ width: 60px;
+ height: 60px;
+}
+.save_button .MuiButtonBase-root.MuiIconButton-root{
+ height: 100%;
+ width: 100%;
+}
+.logout_box{
+position: fixed;
+top: 0;
+right: 0;
+height: 60px;
+display: flex;
+justify-content: flex-end;
+}
+/* end   ヘッダー */
+ 
+/* start メイン */
+.main{
+display: flex;
+height: 100vh;
+max-width: 100vw;
+}
+/*  end  メイン */
+ 
+ 
+/* start ReadPage リスト */
+.read_box{
+ width: 100%;
+display: flex;
+position: fixed;
+top: 60px;
+}
+ 
+.create_list_box{
+height: 100vh;
+width: 173px;
+padding: 8px;
+background-color: #40465B;
+}
+ 
+.create_list_box button{
+margin: 4px;
+width: 147px;
+height: 33px;
+border-radius: 4px;
+}
+ 
+.MuiButtonBase-root.MuiButton-root.MuiButton-containedPrimary{
+margin-top: 12px;
+margin-bottom: 20px;
+background-color: #33ABEF;
+color: #fff
+}
+.create_list_box p{
+margin-top: 0;
+padding-left: 4px !important;
+margin-bottom: 6px !important;
+font-family: "Roboto";
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+color: rgba(255, 255, 255, 0.7);
+}
+ 
+.detail_list_box{
+ padding: 8px 20px 0 20px;
+ width: 100%;
+ background: #E5E5E5;
+ position: relative;
+}
+.detail_list_box_title{
+ margin-top: 24px;
+ margin-bottom: 14px;
+ font-weight: 900;
+ font-size: 14px;
+ line-height: 100%;
+ color: #2E2D49;
+}
+ 
+.detail_list{
+ display:flex;
+ flex-wrap:wrap;
+ align-content: flex-start;
+ width:100%;
+ padding: 10px;
+ position:absolute;
+ top: 62px;
+ bottom: 62px;
+ right: 0;
+ left: 0;
+ overflow-y: auto;
+}
+ 
+.detail_list_item{
+ display: flex;
+ align-items: center;
+ list-style: none;
+ height: 51px;
+ width: 48%;
+ min-width:336px;
+ font-weight: 500;
+ margin: 10px ;
+ background: #FFFFFF;
+ box-shadow: 0px 2px 5px rgba(190, 206, 230, 0.2);
+ border-radius: 4px;
+}
+ 
+.detail_list_item a{
+ width: 70%;
+}
+ 
+.detail_list_item_title{
+ padding-left: 16px;
+ width: 70%;
+ min-width:200px;
+ color: #2E2D49;
+ overflow: hidden;
+ font-weight: 900;
+ font-size: 14px;
+ line-height: 100%;
+}
+ 
+.detail_list_item_update{
+ width: 20%;
+ line-height: 100%;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ min-width:100px;
+ font-weight: normal;
+ font-size: 13px;
+ line-height: 15px;
+ text-align: right;
+ color: rgba(0, 0, 0, 0.4);
+}
+ 
+.detail_list_item_delete{
+ width: 10%;
+ min-width:36px;
+ padding: 0 20px 0 0;
+ display: flex;
+ justify-content: center;
+}
+ 
+.detail_list_item button{
+ padding: 4px;
+ min-width:28px;
+}
+/* end ReadPage リスト */
+ 
+ 
+/* start  rete_main */
+.rete{
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100vw !important;
+height: 100vh !important;
+}
+.rete-background.default {
+ background-size: 18px 18px !important;
+ z-index: -10 !important;
+ background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h12v12H0z'/%3E%3Ccircle cx='1' cy='1' r='1' fill='%23000' fill-opacity='.06'/%3E%3C/svg%3E") !important;
+}
+/* end  ete_main */
+ 
+ 
+/* start  dock */
+.dock_title{
+ position: fixed;
+ width: 204px;
+ top: 60px;
+ right: 0;
+ background: rgba(0, 0, 0, 0.59);
+ z-index: 1;
+}
+ 
+.dock_title p{
+ margin:22px 0 0 15px;
+ font-weight: 900;
+ font-size: 14px;
+ line-height: 100%;
+ color: #FFFFFF;
+}
+ 
+.dock {
+position: fixed;
+top: 96px;
+right: 0;
+height: 100vh;
+padding: 10px;
+background: rgba(0, 0, 0, 0.59);
+z-index: 1;
+}
+ 
+.dock-item {
+transform: scale(0.8);
+opacity: 0.59;
+}
+ 
+.dock-item:hover {
+opacity: 0.9;
+}
+/* end  dock */
+ 
+ 
+/* start  rete_box */
+   /* box_font */
+.node.数字 div,.node.selected.数字 div,.node.掛け算 div,.node.掛け算selected div,.node.合計 div,.node.合計selected div{
+ font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+}
+   /* box_width */
+.node .control input, .node .input-control input {
+ width: 140px;
+}
+   /* box_title */
+.title{
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 600;
+ font-size: 14px;
+ line-height: 100%;
+ color: #FFFFFF;
+}
+   /* input_title */
+.input-title{
+ position: absolute;
+ font-family: 'YuGothic';
+ font-style: normal;
+ font-size: 12px;
+ line-height: 100%;
+ left: 0;
+ color: rgba(255, 255, 255, 0.6);
+ z-index: 10;
+}
+   /* input_box */
+select, input {
+ width: 100%;
+ border-radius: 30px;
+ padding: 2px 6px;
+ font-size: 110%;
+ width: 170px;
+}
+   /* inputの増減ボタンを削除 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+   /* output_title */
+.output-title{
+ position: absolute;
+ font-family: 'YuGothic';
+ font-style: normal;
+ font-size: 12px;
+ line-height: 100%;
+ right: 0;
+ color: rgba(255, 255, 255, 0.6);
+ z-index: 10;
+}
+   /* start  数字BOX */
+.node.数字{
+ background: #DF2E4E;
+ border: 2px solid #DF2E4E;
+ box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.10);
+}
+.node.数字 .title{
+ padding: 16px 0 26px 16px;
+}
+.node.数字 input{
+ border: 2px solid #DF2E4E;
+ background: rgba(0, 0, 0, 0.17);
+ color: #FFFFFF;
+ font-weight: 800;
+ font-size: 18px;
+ line-height: 100%;
+ text-align: right;
+}
+.node.数字 .socket.output.number-value{
+ background-color:#DF2E4E;
+ border: 1px solid #DF2E4E;
+}
+.node.数字:hover,.node.selected.数字{
+ background-color: #DF2E4E;
+ border: 2px solid #DF2E4E;
+}
+.node.数字:hover.node.数字 input,.node.selected.数字 input{/*  */
+ border: 2px solid #DF2E4E;
+ background: rgba(0, 0, 0, 0.17);
+}
+.node.数字:hover.node.数字 .socket.output.number-value,.node.selected.数字 .socket.output.number-value{
+ background-color:#DF2E4E;
+ border: 1px solid #DF2E4E;
+}
+   /* end  数字BOX */
+   /* 掛け算BOX */
+.node.掛け算{
+ background-color: #F1C40D;
+ border: 2px solid   #F1C40D;
+ box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.10);
+}
+.node.掛け算 .title,.node.掛け算selected .title{
+ padding: 16px 0 0 16px;
+}
+.node.掛け算 .control,.node.掛け算selected .control{
+ padding: 3px 18px 0px 18px;
+}
+.node.掛け算 input{
+ border: 2px solid   #F1C40D;
+ background: rgba(0, 0, 0, 0.17);
+ color: #FFFFFF;
+ font-weight: 800;
+ font-size: 18px;
+ line-height: 100%;
+ text-align: right;
+}
+.node.掛け算 .socket.input.number-value,.node.掛け算 .socket.output.number-value{
+ background-color: #F1C40D;
+ border: 1px solid   #F1C40D;
+}
+.node.掛け算:hover,.node.掛け算selected,.node.掛け算selected:hover{
+ background-color: #F1C40D;
+ border: 2px solid   #F1C40D;
+ box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.10);
+}
+.node.掛け算:hover.node.掛け算 input,.node.掛け算selected input{
+ border: 2px solid   #F1C40D;
+ background: rgba(0, 0, 0, 0.17);
+ color: #FFFFFF;
+ font-weight: 800;
+ font-size: 18px;
+ line-height: 100%;
+ text-align: right;
+}
+.node.掛け算:hover.node.掛け算 .socket.input.number-value,
+.node.掛け算:hover.node.掛け算 .socket.output.number-value,
+.node.掛け算selected .socket.input.number-value,
+.node.掛け算selected .socket.output.number-value{
+ background-color: #F1C40D;
+ border: 1px solid   #F1C40D;
+}
+   /* end  掛け算BOX */
+ 
+   /* 合計BOX */
+.node.合計{
+ background-color:#3098F8;
+ border: 2px solid #3098F8;
+ box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.10);
+/* box-shadow: 0px 1px 4px rgba(48,152,248, 0.4); */
+}
+.node.合計 .title,.node.合計selected .title{
+ padding: 16px 0 0 16px;
+}
+.node.合計 .control,.node.合計selected .control{
+ padding: 3px 18px 0px 18px;
+}
+.node.合計 input{
+ border: 2px solid #3098F8;
+ background: rgba(0, 0, 0, 0.17);
+ color: #FFFFFF;
+ font-weight: 800;
+ font-size: 18px;
+ line-height: 100%;
+ text-align: right;
+}
+.node.合計 .socket.input.number-value,.node.合計 .socket.output.number-value{
+ background-color:#3098F8;
+ border: 1px solid #3098F8;
+}
+.node.合計:hover,.node.合計selected,.node.合計selected:hover{
+ background-color:#3098F8;
+ border: 2px solid #3098F8;
+ box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.10);
+ /* box-shadow: 0px 1px 4px rgba(48,152,248, 0.4); */
+}
+ 
+.node.合計:hover.node.合計 input,.node.合計selected input{
+ border: 2px solid #3098F8;
+ background: rgba(0, 0, 0, 0.17);
+ color: #FFFFFF;
+ font-weight: 800;
+ font-size: 18px;
+ line-height: 100%;
+ text-align: right;
+}
+.node.合計:hover.node.合計 .socket.input.number-value,
+.node.合計:hover.node.合計 .socket.output.number-value,
+.node.合計selected .socket.input.number-value,
+.node.合計selected .socket.output.number-value{
+ background-color:#3098F8;
+ border: 1px solid #3098F8;
+}
+   /* end  合計BOX */
+/* end  rete_box */
+ 
+/* start  rete_connection */
+.connection .main-path {
+fill: none;
+stroke-width: 5px;
+stroke: rgba(19, 97, 122, 0.25);
+}
+/* end  rete_connection */
+ 
+ 
+/* start  rete_minimap */
+.minimap.middle{
+width: 147px !important;
+height: 147px !important;
+position: absolute;
+/* left: 220px; */
+right: 220px !important;
+bottom: 16px !important;
+/* padding: 10px !important; */
+background: rgba(89, 132, 152, 0.1);
+overflow: hidden;
+border: 1px solid #b1b7ff;
+border-radius: 8px;
+}
+ 
+ 
+/* start  rete_comment */
+.inline-comment {
+ cursor: pointer;
+ color: #FFFFFF;
+ padding: 12px;
+ border-radius: 8px;
+ border: none !important;
+ background: rgba(0, 0, 0, 0.7);
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: bold;
+ font-size: 14px;
+ line-height: 16px;
+ text-align: center;
+}
+.inline-comment:focus {
+ background: rgba(0, 0, 0, 0.7);
+}
+.inline-comment:hover {
+ background: rgba(0, 0, 0, 0.7);
+}
+/* end  rete_comment */
+ 
+/* start  login,signup_page */
+/* box全体の位置 */
+.MuiContainer-root.MuiContainer-maxWidthXs{
+padding-top: 64px;
+}
+/* アイコンを中央に */
+.lockoutlogo{
+display: flex;
+justify-content: center;
+padding: 8px;
+}
+/* loginの文字を中央に */
+.MuiTypography-root.MuiTypography-h5{
+text-align: center;
+}
+/* ボタンの色 */
+.MuiContainer-root.MuiContainer-maxWidthXs .MuiButton-label{
+ background-color: #33abef;
+}
+.signup_title{
+ margin-top: 0;
+ margin-bottom: 18px;
+}
+/* end  login,signup_page */
